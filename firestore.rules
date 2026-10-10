@@ -1,0 +1,85 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return isAuthenticated() && request.auth.uid == uid;
+    }
+
+    // -------------------------------------------------------------
+    // USERS COLLECTION: users/{uid}
+    // -------------------------------------------------------------
+    match /users/{uid} {
+      // Authenticated users can view member profiles (for contractor-worker hiring and technician discovery)
+      allow read: if isAuthenticated();
+
+      // Only the authenticated user can create their own profile document with their matching UID
+      allow create: if isOwner(uid)
+                    && request.resource.data.uid == uid
+                    && request.resource.data.keys().hasAll(['uid', 'fullName', 'mobileNumber', 'role'])
+                    && request.resource.data.role in ['WORKER', 'THEKEDAR', 'BUILDER', 'CUSTOMER']
+                    && request.resource.data.fullName is string
+                    && request.resource.data.fullName.size() >= 2;
+
+      // Only the account owner can update their own profile
+      // Cannot alter UID, original creation timestamp, or set an invalid role
+      allow update: if isOwner(uid)
+                    && request.resource.data.uid == resource.data.uid
+                    && request.resource.data.createdAt == resource.data.createdAt
+                    && request.resource.data.role in ['WORKER', 'THEKEDAR', 'BUILDER', 'CUSTOMER'];
+
+      // Deletion of user profile documents is prevented to protect marketplace integrity
+      allow delete: if false;
+    }
+
+    // -------------------------------------------------------------
+    // JOBS COLLECTION: jobs/{jobId}
+    // -------------------------------------------------------------
+    match /jobs/{jobId} {
+      // Authenticated users can browse all available jobs across trades
+      allow read: if isAuthenticated();
+
+      // Thekedars/Builders/Customers can create jobs, strictly setting thekedarId to their own authenticated UID
+      allow create: if isAuthenticated()
+                    && request.resource.data.thekedarId == request.auth.uid
+                    && request.resource.data.keys().hasAll(['jobId', 'title', 'workerType', 'thekedarId', 'status'])
+                    && request.resource.data.title is string
+                    && request.resource.data.title.size() >= 3;
+
+      // Only the contractor/builder/customer who created the job can update it
+      allow update: if isAuthenticated()
+                    && resource.data.thekedarId == request.auth.uid;
+
+      // Only the contractor/builder/customer who created the job can delete it
+      allow delete: if isAuthenticated()
+                    && resource.data.thekedarId == request.auth.uid;
+    }
+
+    // -------------------------------------------------------------
+    // APPLICATIONS COLLECTION: applications/{applicationId}
+    // -------------------------------------------------------------
+    match /applications/{applicationId} {
+      // An application can be read only by the applicant worker or the hiring contractor
+      allow read: if isAuthenticated()
+                  && (resource.data.workerId == request.auth.uid || resource.data.thekedarId == request.auth.uid);
+
+      // Only an authenticated worker can submit an application on their own behalf
+      allow create: if isAuthenticated()
+                    && request.resource.data.workerId == request.auth.uid
+                    && request.resource.data.keys().hasAll(['applicationId', 'jobId', 'workerId', 'thekedarId', 'status']);
+
+      // Contractor can accept/reject (update status), worker can withdraw or update
+      allow update: if isAuthenticated()
+                    && (resource.data.thekedarId == request.auth.uid || resource.data.workerId == request.auth.uid);
+
+      // Worker can withdraw and delete their own application
+      allow delete: if isAuthenticated()
+                    && resource.data.workerId == request.auth.uid;
+    }
+  }
+}

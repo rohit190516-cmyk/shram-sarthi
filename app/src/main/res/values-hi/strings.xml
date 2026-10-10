@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">श्रम सारथी</string>
+    <string name="app_tagline">मजदूरों का साथी, बेहतर कल की ओर</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">होम</string>
+    <string name="nav_records">रिकॉर्ड</string>
+    <string name="nav_complaints">शिकायत</string>
+    <string name="nav_profile">प्रोफ़ाइल</string>
+
+    <!-- Common Actions -->
+    <string name="action_submit">जमा करें</string>
+    <string name="action_save_draft">ड्राफ्ट सेव करें</string>
+    <string name="action_cancel">रद्द करें</string>
+    <string name="action_retry">दोबारा प्रयास करें</string>
+    <string name="action_apply">आवेदन करें</string>
+    <string name="action_applied">आवेदन किया गया</string>
+    <string name="action_view_details">विवरण देखें</string>
+    <string name="action_share">शेयर करें</string>
+    <string name="action_copy">कॉपी करें</string>
+    <string name="action_find_work">काम खोजें</string>
+    <string name="action_voice_search">बोलके काम खोजें</string>
+    <string name="action_talk_ai_saathi">AI साथी से बात करें</string>
+    <string name="action_voice_complaint">बोलकर शिकायत करें</string>
+    <string name="action_new_complaint">नई शिकायत दर्ज करें</string>
+    <string name="action_logout">लॉग आउट</string>
+    <string name="action_switch_role">भूमिका बदलें</string>
+    <string name="action_terms">गोपनीयता और नियम</string>
+    <string name="action_edit_profile">प्रोफाइल संपादित करें</string>
+    <string name="action_close">बंद करें</string>
+
+    <!-- Complaints Section -->
+    <string name="complaints_hero_title">AI साथी से बात करें</string>
+    <string name="complaints_hero_subtitle">अपनी समस्या बताएं, कानून समझें और शिकायत तैयार करें</string>
+    <string name="complaints_sample_prompt_1">\"मेरी मजदूरी नहीं मिली\"</string>
+    <string name="complaints_sample_prompt_2">\"ठेकेदार ने पैसा देने से मना किया\"</string>
+    <string name="complaints_sample_prompt_3">\"काम पर सुरक्षा की समस्या है\"</string>
+
+    <string name="complaints_select_type">शिकायत का प्रकार चुनें</string>
+    <string name="complaint_cat_unpaid_wages">मजदूरी नहीं मिली</string>
+    <string name="complaint_cat_delayed_payment">देरी से भुगतान</string>
+    <string name="complaint_cat_unfair_treatment">अनुचित व्यवहार</string>
+    <string name="complaint_cat_unsafe_workplace">असुरक्षित कार्यस्थल</string>
+    <string name="complaint_cat_work_dispute">काम का विवाद</string>
+    <string name="complaint_cat_other">अन्य समस्या</string>
+
+    <string name="complaints_process_title">क्या है शिकायत प्रक्रिया?</string>
+    <string name="step_1_title">समस्या बताएं</string>
+    <string name="step_1_desc">अपनी बात लिखें या बोलें</string>
+    <string name="step_2_title">जानकारी दें</string>
+    <string name="step_2_desc">तारीख, जगह, ठेकेदार, राशि आदि</string>
+    <string name="step_3_title">सबूत जोड़ें</string>
+    <string name="step_3_desc">फोटो, रसीद, मेसेज, रिकॉर्ड</string>
+    <string name="step_4_title">AI तैयारी करेगा</string>
+    <string name="step_4_desc">कानून बताएगा और शिकायत तैयार करेगा</string>
+    <string name="step_5_title">आप समीक्षा करें और जमा करें</string>
+    <string name="step_5_desc">सही करके सेव या शेयर करें</string>
+
+    <string name="complaints_my_complaints">मेरी शिकायतें</string>
+    <string name="complaints_view_all">सभी देखें</string>
+    <string name="complaints_empty_title">अभी कोई शिकायत नहीं है।</string>
+    <string name="complaints_empty_desc">\'बोलकर शिकायत करें\' दबाएं या ऊपर से श्रेणी चुनकर शिकायत दर्ज करें।</string>
+
+    <string name="status_draft">तैयार हुई - शिकायत ड्राफ्ट तैयार है</string>
+    <string name="status_in_progress">प्रगति में - जानकारी एकत्र की जा रही है</string>
+    <string name="status_submitted">जमा किया गया - श्रम विभाग में भेजा गया</string>
+
+    <!-- Records Section -->
+    <string name="records_title">मेरे काम का रिकॉर्ड</string>
+    <string name="records_subtitle">यहाँ आप अपने पिछले और पूरे किए गए कामों का विवरण देख सकते हैं।</string>
+    <string name="records_empty_title">अभी कोई काम का रिकॉर्ड नहीं है।</string>
+    <string name="records_empty_desc">जब आप सत्यापित काम पूरा करेंगे, तो आपका रिकॉर्ड यहाँ दिखाई देगा।</string>
+    <string name="chip_all">सभी</string>
+    <string name="chip_ongoing">चल रहे</string>
+    <string name="chip_completed">पूरा हुए</string>
+    <string name="chip_paid">भुगतान हुआ</string>
+    <string name="chip_pending">भुगतान बाकी</string>
+
+    <!-- Profile Section -->
+    <string name="profile_change_language">भाषा बदलें</string>
+    <string name="profile_language_sub">हिन्दी</string>
+    <string name="profile_my_info">मेरी जानकारी</string>
+    <string name="profile_address">पता और कार्य क्षेत्र</string>
+    <string name="profile_skills">कौशल और अनुभव</string>
+    <string name="profile_payment">भुगतान जानकारी</string>
+    <string name="profile_trust_score">डिजिटल ट्रस्ट स्कोर</string>
+    <string name="profile_verified">सत्यापित</string>
+
+    <!-- Home Section -->
+    <string name="home_hero_title">आपका कौशल आपकी पहचान</string>
+    <string name="home_hero_subtitle">यहाँ पाएं अपने लिए सही काम और बेहतर अवसर</string>
+    <string name="home_quick_nearby">पास के काम</string>
+    <string name="home_quick_contractors">ठेकेदार खोजें</string>
+    <string name="home_quick_map">नक्शे पर देखें</string>
+    <string name="home_quick_schemes">सरकारी योजनाएं</string>
+    <string name="home_new_jobs">नए काम के अवसर</string>
+    <string name="home_active_jobs">मेरे सक्रिय काम</string>
+    <string name="home_search_placeholder">किस तरह का काम ढूंढ रहे हैं?</string>
+    <string name="home_no_active_work">कोई सक्रिय काम नहीं है</string>
+    <string name="home_no_active_work_desc">नजदीकी काम देखें और काम शुरू करने के लिए आवेदन करें।</string>
+</resources>

@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">Shram Sarthi</string>
+    <string name="app_tagline">Worker\'s Companion, Towards a Better Tomorrow</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_records">Records</string>
+    <string name="nav_complaints">Complaints</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Common Actions -->
+    <string name="action_submit">Submit</string>
+    <string name="action_save_draft">Save Draft</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_retry">Retry</string>
+    <string name="action_apply">Apply Now</string>
+    <string name="action_applied">Applied</string>
+    <string name="action_view_details">View Details</string>
+    <string name="action_share">Share</string>
+    <string name="action_copy">Copy</string>
+    <string name="action_find_work">Find Work</string>
+    <string name="action_voice_search">Voice Work Search</string>
+    <string name="action_talk_ai_saathi">Talk to AI Saathi</string>
+    <string name="action_voice_complaint">Voice Complaint</string>
+    <string name="action_new_complaint">New Complaint</string>
+    <string name="action_logout">Log Out</string>
+    <string name="action_switch_role">Switch Role</string>
+    <string name="action_terms">Terms &amp; Policy</string>
+    <string name="action_edit_profile">Edit Profile</string>
+    <string name="action_close">Close</string>
+
+    <!-- Complaints Section -->
+    <string name="complaints_hero_title">Talk to AI Saathi</string>
+    <string name="complaints_hero_subtitle">Explain your problem, understand rights and prepare a formal complaint</string>
+    <string name="complaints_sample_prompt_1">\"I have not received my wages\"</string>
+    <string name="complaints_sample_prompt_2">\"Contractor refused to pay\"</string>
+    <string name="complaints_sample_prompt_3">\"Safety hazards at worksite\"</string>
+
+    <string name="complaints_select_type">Select Complaint Type</string>
+    <string name="complaint_cat_unpaid_wages">Unpaid Wages</string>
+    <string name="complaint_cat_delayed_payment">Delayed Payment</string>
+    <string name="complaint_cat_unfair_treatment">Unfair Treatment</string>
+    <string name="complaint_cat_unsafe_workplace">Unsafe Workplace</string>
+    <string name="complaint_cat_work_dispute">Work Dispute</string>
+    <string name="complaint_cat_other">Other Problem</string>
+
+    <string name="complaints_process_title">What is the Complaint Process?</string>
+    <string name="step_1_title">State Problem</string>
+    <string name="step_1_desc">Speak or write your issue</string>
+    <string name="step_2_title">Give Details</string>
+    <string name="step_2_desc">Dates, location, amount</string>
+    <string name="step_3_title">Add Evidence</string>
+    <string name="step_3_desc">Photos, slips, records</string>
+    <string name="step_4_title">AI Prepares</string>
+    <string name="step_4_desc">Cites legal acts &amp; drafts</string>
+    <string name="step_5_title">Review &amp; Submit</string>
+    <string name="step_5_desc">Review, save or share</string>
+
+    <string name="complaints_my_complaints">My Complaints</string>
+    <string name="complaints_view_all">View All</string>
+    <string name="complaints_empty_title">You have no complaints yet.</string>
+    <string name="complaints_empty_desc">Tap \'Voice Complaint\' or choose a category above to prepare a formal grievance.</string>
+
+    <string name="status_draft">Draft Ready</string>
+    <string name="status_in_progress">In Progress</string>
+    <string name="status_submitted">Submitted to Labour Dept</string>
+
+    <!-- Records Section -->
+    <string name="records_title">My Work Records</string>
+    <string name="records_subtitle">View your past, ongoing, and completed work history here.</string>
+    <string name="records_empty_title">No work records found yet</string>
+    <string name="records_empty_desc">When you apply and complete verified work, your records will appear here.</string>
+    <string name="chip_all">All</string>
+    <string name="chip_ongoing">Ongoing</string>
+    <string name="chip_completed">Completed</string>
+    <string name="chip_paid">Paid</string>
+    <string name="chip_pending">Payment Pending</string>
+
+    <!-- Profile Section -->
+    <string name="profile_change_language">Change Language</string>
+    <string name="profile_language_sub">English</string>
+    <string name="profile_my_info">My Information</string>
+    <string name="profile_address">Address &amp; Work Area</string>
+    <string name="profile_skills">Skills &amp; Experience</string>
+    <string name="profile_payment">Payment Details</string>
+    <string name="profile_trust_score">Digital Trust Score</string>
+    <string name="profile_verified">Verified</string>
+
+    <!-- Home Section -->
+    <string name="home_hero_title">Your Skill, Your Identity</string>
+    <string name="home_hero_subtitle">Find the right work, fair wages, and worker rights</string>
+    <string name="home_quick_nearby">Nearby Jobs</string>
+    <string name="home_quick_contractors">Contractors</string>
+    <string name="home_quick_map">View on Map</string>
+    <string name="home_quick_schemes">Govt Schemes</string>
+    <string name="home_new_jobs">New Job Opportunities</string>
+    <string name="home_active_jobs">My Active Work</string>
+    <string name="home_search_placeholder">What kind of work are you looking for?</string>
+    <string name="home_no_active_work">No active ongoing work</string>
+    <string name="home_no_active_work_desc">Browse nearby jobs and apply to start working.</string>
+</resources>
